@@ -25,7 +25,7 @@ function playRound(playerChoice, computerChoice) {
       disableButtons();
       return;
     }
-    return `You Win! ${playerChoice} beats ${computerChoice}.`;
+    result.textContent = `You Win! ${playerChoice} beats ${computerChoice}.`;
   } else {
     score.computer++;
     computerScore.textContent = score.computer;
@@ -34,7 +34,7 @@ function playRound(playerChoice, computerChoice) {
       disableButtons();
       return;
     }
-    return `You Lose! ${computerChoice} beats ${playerChoice}.`;
+    result.textContent = `You Lose! ${computerChoice} beats ${playerChoice}.`;
   }
 }
 
@@ -48,7 +48,6 @@ buttons.forEach((button) => {
   button.addEventListener('click', () => {
     const playerChoice = button.id;
     const computerChoice = computerPlay();
-    const resultText = playRound(playerChoice, computerChoice);
-    result.textContent = resultText;
+    playRound(playerChoice, computerChoice);
   });
 });
