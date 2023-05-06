@@ -1,0 +1,52 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    flex-direction: column;
+    display: flex;
+    align-items: left;
+    justify-content: center;
+  }
+  
+
+  h1 {
+    font-size: 36px;
+    margin-top: 50px;
+  }
+  
+  .score {
+    margin-top: 30px;
+    font-size: 24px;
+  }
+  
+  .score p {
+    display: inline-block;
+    margin-right: 20px;
+  }
+  
+  .game {
+    margin-top: 50px;
+  }
+  
+  button {
+    font-size: 18px;
+    padding: 10px 20px;
+    margin-right: 20px;
+  }
+
+  img {
+    width: 100px;
+    height: 100px;
+  }
+  
+  #result {
+    margin-top: 50px;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
