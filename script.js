@@ -11,7 +11,7 @@ function computerPlay() {
   return choices[Math.floor(Math.random() * choices.length)];
 }
 
-// ASSIGNING THE CHOICE OF THE PLAYER AND THE COMPUTER
+// ASSIGNING THE CHOICE OF THE PLAYER AND THE COMPUTER THEN DETERMINING THE WINNER USING playRound function
 buttons.forEach((button) => {
   button.addEventListener("click", () => {
     const playerChoice = button.id;
@@ -20,10 +20,12 @@ buttons.forEach((button) => {
   });
 });
 
+
+// FUNTION FOR SCNEARIOS
 function playRound(playerChoice, computerChoice) {
   // SAME CHOICE SCENARIO
   if (playerChoice === computerChoice) {
-    result.textContent = `You're Tied! Computer also chose ${computerChoice}.`;
+    result.innerHTML = `You're Tied! Computer also chose ${computerChoice}.`;
   }
 
   // PLAYER WINNER SCENARIO
@@ -40,7 +42,7 @@ function playRound(playerChoice, computerChoice) {
       disableButtons();
       return;
     }
-    result.textContent = `You Win! ${playerChoice} beats ${computerChoice}.`;
+    result.innerHTML = `You Win! ${playerChoice} beats ${computerChoice}.`;
   }
 
   // COMPUMTER WINNER SCENARIO
@@ -53,9 +55,10 @@ function playRound(playerChoice, computerChoice) {
       disableButtons();
       return;
     }
-    result.textContent = `You Lose! ${computerChoice} beats ${playerChoice}.`;
+    result.innerHTML = `You Lose! ${computerChoice} beats ${playerChoice}.`;
   }
 }
+
 
 function disableButtons() {
   buttons.forEach((button) => {
