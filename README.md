@@ -9,5 +9,5 @@ COURSE: BSIT
 
 SECTION: IT2R5
 
-WEBSITE: 
+WEBSITE: https://khenpaler.github.io/JACK-EN-POI-GAME/
 
