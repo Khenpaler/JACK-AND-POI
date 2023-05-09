@@ -5,8 +5,8 @@ const result = document.getElementById("result");
 
 let score = { player: 0, computer: 0 };
 
+// FUNTION TO LET COMPUTER GET RANDOM CHOICE
 function computerPlay() {
-  // RANDOM CHOICE OF THE COMPUTER
   const choices = ["rock", "paper", "scissors"];
   return choices[Math.floor(Math.random() * choices.length)];
 }
@@ -19,7 +19,6 @@ buttons.forEach((button) => {
     playRound(playerChoice, computerChoice);
   });
 });
-
 
 // FUNTION FOR SCNEARIOS
 function playRound(playerChoice, computerChoice) {
@@ -42,7 +41,7 @@ function playRound(playerChoice, computerChoice) {
       disableButtons();
       return;
     }
-    result.innerHTML = `You Win! ${playerChoice} beats ${computerChoice}.`;
+    result.innerHTML = `You Win! Your ${playerChoice} beats Computer's ${computerChoice}.`;
   }
 
   // COMPUMTER WINNER SCENARIO
@@ -55,10 +54,9 @@ function playRound(playerChoice, computerChoice) {
       disableButtons();
       return;
     }
-    result.innerHTML = `You Lose! ${computerChoice} beats ${playerChoice}.`;
+    result.innerHTML = `You Lose! Computer's ${computerChoice} beats your ${playerChoice}.`;
   }
 }
-
 
 function disableButtons() {
   buttons.forEach((button) => {
